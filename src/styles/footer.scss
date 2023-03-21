@@ -1,0 +1,16 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+   
+}
+
+.icono_footer{
+
+    width: 3rem;
+}
+.footer-copy{
+font: $font-style;
+font-size: 1rem;
+}
