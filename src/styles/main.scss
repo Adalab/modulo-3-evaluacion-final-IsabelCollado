@@ -24,6 +24,7 @@
     margin: 0.5rem;
     border: 1px solid #FFCA33;
     border-radius: 5px;
+    background-color: hsl(6, 21%, 38%);
 }
 
 .list_character_img{
@@ -58,4 +59,9 @@
 
 .btn_reset:hover {
     background-color: #ffa000;
+  }
+
+  .input_radio{
+    margin: 0.25rem;
+    font:$font-style-2;
   }

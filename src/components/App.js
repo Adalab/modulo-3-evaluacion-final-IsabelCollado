@@ -27,20 +27,18 @@ function App() {
   const handleSelectHouse = (value) => {
     setselectHouse(value);
   };
+
   const handleClickBtn = () => {
     setCharacterList('');
     setselectHouse('Gryffindor');
     window.location.reload();
   };
 
-  const filterCharacterName = (eachCharacter) =>
+  const filterCharacterName = characterList.filter((eachCharacter) =>
     eachCharacter.name
       .toLocaleLowerCase()
-      .includes(searchName.toLocaleLowerCase());
-
-  const renderFilteredList = () => {
-    return characterList.filter(filterCharacterName);
-  };
+      .includes(searchName.toLocaleLowerCase())
+  );
 
   return (
     <div className="App">
@@ -59,8 +57,13 @@ function App() {
                     selectHouse={selectHouse}
                     handleSelectHouse={handleSelectHouse}
                   ></Filter>
-
-                  <CharacterList characterList={renderFilteredList()} />
+                  <section className="errormsg">
+                    {filterCharacterName.length > 0 ? (
+                      <CharacterList characterList={filterCharacterName} />
+                    ) : (
+                      `No hay personajes que coincidan con ${searchName}`
+                    )}
+                  </section>
                 </>
               }
             ></Route>

@@ -1,7 +1,8 @@
 .App{
-    width: 100%;
+    width: 100vw;
     padding: 2rem;
     background-color: $warm-grey;
+    
 }
 
 
@@ -13,7 +14,7 @@
 }
 
 .search_section{
-    width:100%;
+   
     font: $font-style;
     display:flex;
     flex-direction: column ;
@@ -29,15 +30,23 @@
     margin: 0.5rem;
     border: 1px solid #FFCA33;
     border-radius: 5px;
-    gap: 1rem;
+   
    
 }
 .input{
 margin: 0.25rem;
 font:$font-style-2;
 }
-
 .select{
     margin: 0.25rem;
     font:$font-style-2;
+}
+.errormsg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font:$font-style;
+    font-weight: bolder;
+    color: #FFCA33;
+    
 }

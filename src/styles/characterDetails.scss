@@ -25,14 +25,14 @@
     align-items: center;
     padding: 0.25rem;
     margin: 0.5rem;
-    border: 2px solid #FFCA33;
+    border: 3px solid #FFCA33;
     border-radius: 5px;
-    background-color:#840005;
+    background-color:#4f140d;
 }  
 .img_details{
 
-    width: 15rem;
-    padding: 0.5rem;
+    width: 13rem;
+    padding: 1rem;
 }
 .ul_details{
 
@@ -62,8 +62,23 @@
     color: white;
     font: $font-style-2;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding-right: 0.5rem;
+}
+.status{
+
+    color: white;
+    font: $font-style-2;
+    font-weight: bold;
+    font-size: 1.3rem;
+   
+}
+.heart_yes{
+    width: 2rem; 
+}
+
+.skull_no{
+    width: 2rem;
 }
 
 

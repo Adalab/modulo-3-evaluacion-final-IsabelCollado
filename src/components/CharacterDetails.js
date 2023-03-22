@@ -1,7 +1,8 @@
 import { NavLink, useParams } from 'react-router-dom';
 import '../styles/App.scss';
-//mport yes from '../images/icons8-corazón-con-pulso-48.png';
-//import no from '../images/icons8-skull-heart-45.png';
+
+import yes from '../images/icons8-corazón-con-pulso-48.png';
+import no from '../images/icons8-skull-heart-45.png';
 const CharacterDetails = ({ characterList }) => {
   const { id } = useParams();
   const characterSelected = characterList.find(
@@ -24,10 +25,30 @@ const CharacterDetails = ({ characterList }) => {
             <ul className="ul_details">
               <li className="list_details">
                 <h2 className="name_details">{characterSelected.name}</h2>
-                <span className="span_details_title">Status: </span>
-                <span className="span_details">
-                  {characterSelected.alive === true ? 'yes' : 'No'}
-                </span>
+              </li>
+              <li className="status">
+                Estatus:{' '}
+                {characterSelected.alive === true ? (
+                  <>
+                    Vivo/a{'  '}
+                    <img
+                      src={yes}
+                      alt="heart"
+                      title="heart"
+                      className="heart_yes"
+                    />
+                  </>
+                ) : (
+                  <>
+                    Muerto/a{'  '}
+                    <img
+                      src={no}
+                      alt="skull"
+                      title="heart"
+                      className="skull_no"
+                    />
+                  </>
+                )}
               </li>
               <li className="list_details">
                 <span className="span_details_title">Species:</span>
