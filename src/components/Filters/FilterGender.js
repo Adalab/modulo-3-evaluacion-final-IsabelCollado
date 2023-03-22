@@ -1,36 +1,24 @@
-const FilterGender = ({ handleGenderFilter, filterGender }) => {
-  const handleGenderChecked = (ev) => {
-    handleGenderFilter(ev.target.value);
+const FilterGender = ({ selectedGender, handleSelectGender }) => {
+  const handleSelect = (ev) => {
+    handleSelectGender(ev.target.value);
   };
+
   return (
     <>
-      <label className="input_radio"> Todos los Géneros:</label>
-      <input
-        type="radio"
-        id="all"
-        name="all"
-        value="all"
-        checked={filterGender === 'all'}
-        onChange={handleGenderChecked}
-      ></input>
-      <label className="input_radio"> Masculino:</label>
-      <input
-        type="radio"
-        id="male"
-        name="male"
-        value="male"
-        checked={filterGender === 'male'}
-        onChange={handleGenderChecked}
-      ></input>
-      <label className="input_radio"> Femenino:</label>
-      <input
-        type="radio"
-        id="female"
-        name="female"
-        value="female"
-        checked={filterGender === 'female'}
-        onChange={handleGenderChecked}
-      ></input>
+      <label htmlFor="selectGender" className="select">
+        Selecciona un género:
+      </label>
+      <select
+        className="select"
+        name="select gender"
+        id="selectGender"
+        onChange={handleSelect}
+        value={selectedGender}
+      >
+        <option value="all">Todos</option>
+        <option value="female">Mujer</option>
+        <option value="male">Hombre</option>
+      </select>
     </>
   );
 };

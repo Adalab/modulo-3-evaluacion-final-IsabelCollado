@@ -4,11 +4,11 @@ const FilterName = ({ handleInputFilter, searchName }) => {
   };
   return (
     <>
-      <label htmlFor="searchCharacter" className="input">
+      <label htmlFor="searchCharacter" className="input_text">
         Buscar por personaje:
       </label>
       <input
-        className="input"
+        className="input_search"
         type="text"
         autoComplete="off"
         name="name"

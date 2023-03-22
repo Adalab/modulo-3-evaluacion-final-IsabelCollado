@@ -1,5 +1,5 @@
 .App{
-    width: 100vw;
+    width: 100%;
     padding: 2rem;
     background-color: $warm-grey;
     
@@ -9,44 +9,7 @@
 
 .title_header{
 
-    width: 90%;
+    width: 100%;
     
 }
 
-.search_section{
-   
-    font: $font-style;
-    display:flex;
-    flex-direction: column ;
-    align-items: center;
-}
-.form_section{
-    
-    display:flex;
-    flex-direction:row;
-    justify-content: center;
-    align-items: center;
-    padding: 0.25rem;
-    margin: 0.5rem;
-    border: 1px solid #FFCA33;
-    border-radius: 5px;
-   
-   
-}
-.input{
-margin: 0.25rem;
-font:$font-style-2;
-}
-.select{
-    margin: 0.25rem;
-    font:$font-style-2;
-}
-.errormsg{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font:$font-style;
-    font-weight: bolder;
-    color: #FFCA33;
-    
-}

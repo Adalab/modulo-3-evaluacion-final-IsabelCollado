@@ -6,8 +6,8 @@ const Filter = ({
   searchName,
   selectHouse,
   handleSelectHouse,
-  handleGenderFilter,
-  filterGender,
+  selectedGender,
+  handleSelectGender,
 }) => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
@@ -24,8 +24,8 @@ const Filter = ({
           selectHouse={selectHouse}
         ></FilterHouse>
         <FilterGender
-          handleGenderFilter={handleGenderFilter}
-          filterGender={filterGender}
+          handleSelectGender={handleSelectGender}
+          selectedGender={selectedGender}
         />
       </form>
     </section>

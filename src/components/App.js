@@ -1,5 +1,3 @@
-/* SECCIÓN DE IMPORT */
-
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import api from '../service/api';
@@ -10,10 +8,12 @@ import CharacterDetails from './CharacterDetails';
 import Header from './Header';
 import Footer from './Footer';
 import ResetBtn from './Reset';
+
 function App() {
   const [characterList, setCharacterList] = useState([]);
   const [searchName, setSearchName] = useState('');
   const [selectHouse, setselectHouse] = useState('Gryffindor');
+  const [selectedGender, setSelectedGender] = useState('all');
 
   useEffect(() => {
     api.getCharactersHouse(selectHouse).then((infoCharacters) => {
@@ -27,10 +27,14 @@ function App() {
   const handleSelectHouse = (value) => {
     setselectHouse(value);
   };
+  const handleSelectGender = (value) => {
+    setSelectedGender(value);
+  };
 
   const handleClickBtn = () => {
     setCharacterList('');
     setselectHouse('Gryffindor');
+    setSelectedGender('all');
     window.location.reload();
   };
 
@@ -56,6 +60,8 @@ function App() {
                     handleInputFilter={handleInputFilter}
                     selectHouse={selectHouse}
                     handleSelectHouse={handleSelectHouse}
+                    selectedGender={selectedGender}
+                    handleSelectGender={handleSelectGender}
                   ></Filter>
                   <section className="errormsg">
                     {filterCharacterName.length > 0 ? (

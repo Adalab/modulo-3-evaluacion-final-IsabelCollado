@@ -1,6 +1,9 @@
 import { NavLink, useParams } from 'react-router-dom';
 import '../styles/App.scss';
-
+import Gryffindor from '../images/Gryffindor.png';
+import Hufflepuff from '../images/Hufflepuff.png';
+import Ravenclaw from '../images/Ravenclaw.png';
+import Slytherin from '../images/Slytherin.png';
 import yes from '../images/icons8-corazón-con-pulso-48.png';
 import no from '../images/icons8-skull-heart-45.png';
 const CharacterDetails = ({ characterList }) => {
@@ -8,12 +11,25 @@ const CharacterDetails = ({ characterList }) => {
   const characterSelected = characterList.find(
     (eachCharacter) => eachCharacter.id === id
   );
+  const houseClass = () => {
+    if (characterSelected.house === 'Gryffindor') {
+      return `${Gryffindor}`;
+    } else if (characterSelected.house === 'Slytherin') {
+      return `${Slytherin}`;
+    } else if (characterSelected.house === 'Ravenclaw') {
+      return `${Ravenclaw}`;
+    } else if (characterSelected.house === 'Hufflepuff') {
+      return `${Hufflepuff}`;
+    }
+  };
+
   if (characterSelected !== undefined) {
     return (
       <>
         <NavLink className="return" to="/">
           Volver página principal
         </NavLink>
+
         <article className="article">
           <div className="card_details">
             <img
@@ -60,9 +76,12 @@ const CharacterDetails = ({ characterList }) => {
                 <span className="span_details_title">Gender:</span>
                 <span className="span_details">{characterSelected.gender}</span>
               </li>
+
               <li className="list_details">
-                <span className="span_details_title">House:</span>
-                <span className="span_details">{characterSelected.house}</span>
+                <span className="span_details_title">
+                  Casa: {characterSelected.house}
+                </span>
+                <img src={houseClass()} alt="" className="detail_house_img" />
               </li>
             </ul>
           </div>

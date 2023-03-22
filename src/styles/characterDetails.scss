@@ -1,3 +1,4 @@
+
 .article{
 
     width: 100%;
@@ -13,14 +14,22 @@
     justify-content:flex-end;
     color: black;
     font: $font-style;
+    font-size: 0.8rem;
     font-weight: bold;
+
+    @media(min-width: 768px){
+        display: flex;
+        justify-content:flex-end;
+        color: black;
+        font: $font-style;
+        font-weight: bold;
+    }
 }
 
 .card_details{
-    width: 35rem;
-    height: 25rem;
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-content: center;
     align-items: center;
     padding: 0.25rem;
@@ -28,6 +37,20 @@
     border: 3px solid #FFCA33;
     border-radius: 5px;
     background-color:#4f140d;
+
+    @media(min-width: 768px){
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        padding: 0.25rem;
+        margin: 0.5rem;
+        border: 3px solid #FFCA33;
+        border-radius: 5px;
+        background-color:#4f140d;
+
+    }
 }  
 .img_details{
 
@@ -41,8 +64,15 @@
 .name_details{
     color: white;;
     font: $font-style-2;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
+
+    @media(min-width: 768px){
+        color: white;;
+        font: $font-style-2;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
 }
 
 .list_details{
@@ -52,7 +82,6 @@
     font-weight: bold;
 }
 .span_details{
-
     color: white;
     font: $font-style-2;
     font-weight: bold;
@@ -62,15 +91,28 @@
     color: white;
     font: $font-style-2;
     font-weight: bold;
-    font-size: 1.3rem;
     padding-right: 0.5rem;
+
+    @media(min-width: 768px){
+        color: white;
+        font: $font-style-2;
+        font-size: 1.3rem;
+        font-weight: bold;
+        padding-right: 0.5rem;
+    }
 }
 .status{
-
     color: white;
     font: $font-style-2;
     font-weight: bold;
-    font-size: 1.3rem;
+
+    @media(min-width: 768px){
+        color: white;
+        font: $font-style-2;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+    
    
 }
 .heart_yes{
@@ -78,7 +120,24 @@
 }
 
 .skull_no{
-    width: 2rem;
+    position: absolute;
+    width: 3rem;
+    padding-left: 1rem;
 }
+
+.detail_house_img{
+    position: absolute;
+    width: 2rem;
+    margin-top: -1.5rem;
+    margin-left: 2rem;
+
+    @media(min-width: 768px){
+        position: absolute;
+        width: 5rem;
+        margin-top: -1.5rem;
+        margin-left: 6rem;
+    }
+}
+
 
 
