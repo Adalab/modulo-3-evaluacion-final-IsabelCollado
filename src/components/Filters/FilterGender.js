@@ -1,18 +1,18 @@
 const FilterGender = ({ selectedGender, handleSelectGender }) => {
-  const handleSelect = (ev) => {
+  const handleChange = (ev) => {
     handleSelectGender(ev.target.value);
   };
 
   return (
     <>
-      <label htmlFor="selectGender" className="select">
+      <label htmlFor="gender" className="select">
         Selecciona un género:
       </label>
       <select
         className="select"
-        name="select gender"
-        id="selectGender"
-        onChange={handleSelect}
+        name="gender"
+        id="gender"
+        onChange={handleChange}
         value={selectedGender}
       >
         <option value="all">Todos</option>

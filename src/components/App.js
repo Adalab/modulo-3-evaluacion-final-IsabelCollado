@@ -1,4 +1,11 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
+import {
+  Navigate,
+  Route,
+  Routes,
+  matchPath,
+  useLocation,
+  useParams,
+} from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import api from '../service/api';
 import '../styles/App.scss';
@@ -38,11 +45,17 @@ function App() {
     window.location.reload();
   };
 
-  const filterCharacterName = characterList.filter((eachCharacter) =>
-    eachCharacter.name
-      .toLocaleLowerCase()
-      .includes(searchName.toLocaleLowerCase())
-  );
+  const filterCharacterName = characterList
+    .filter((eachCharacter) =>
+      eachCharacter.name
+        .toLocaleLowerCase()
+        .includes(searchName.toLocaleLowerCase())
+    )
+    .filter((eachCharacter) => {
+      return selectedGender === 'all'
+        ? true
+        : eachCharacter.gender === selectedGender;
+    });
 
   return (
     <div className="App">
