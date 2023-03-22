@@ -52,19 +52,20 @@ function App() {
               path="/"
               element={
                 <>
+                  <ResetBtn handleClickBtn={handleClickBtn} />
                   <Filter
                     searchName={searchName}
                     handleInputFilter={handleInputFilter}
                     selectHouse={selectHouse}
                     handleSelectHouse={handleSelectHouse}
                   ></Filter>
-                  <ResetBtn handleClickBtn={handleClickBtn} />
+
                   <CharacterList characterList={renderFilteredList()} />
                 </>
               }
             ></Route>
             <Route
-              path="/character/:Id"
+              path="/character/:id"
               element={
                 <CharacterDetails
                   characterList={characterList}
