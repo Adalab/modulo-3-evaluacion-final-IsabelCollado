@@ -9,40 +9,44 @@ const CharacterDetails = ({ characterList }) => {
   );
   if (characterSelected !== undefined) {
     return (
-      <article className="article">
+      <>
         <NavLink className="return" to="/">
           Volver página principal
         </NavLink>
-        <div className="card_details">
-          <img
-            className="img_details"
-            src={characterSelected.image}
-            alt={characterSelected.name}
-          />
+        <article className="article">
+          <div className="card_details">
+            <img
+              className="img_details"
+              src={characterSelected.image}
+              alt={characterSelected.name}
+            />
 
-          <h2 className="name_details">{characterSelected.name}</h2>
-          <ul>
-            <li className="list_details">
-              <span className="span_details">Status: </span>
-              <span className="span_details">
-                {characterSelected.alive === true ? 'yes' : 'No'}
-              </span>
-            </li>
-            <li className="list_details">
-              <span className="span_details_title">Species:</span>
-              <span className="span_details">{characterSelected.species}</span>
-            </li>
-            <li className="list_details">
-              <span className="span_details_title">Gender:</span>
-              <span className="span_details">{characterSelected.gender}</span>
-            </li>
-            <li className="list_details">
-              <span className="span_details_title">House:</span>
-              <span className="span_details">{characterSelected.house}</span>
-            </li>
-          </ul>
-        </div>
-      </article>
+            <ul className="ul_details">
+              <li className="list_details">
+                <h2 className="name_details">{characterSelected.name}</h2>
+                <span className="span_details_title">Status: </span>
+                <span className="span_details">
+                  {characterSelected.alive === true ? 'yes' : 'No'}
+                </span>
+              </li>
+              <li className="list_details">
+                <span className="span_details_title">Species:</span>
+                <span className="span_details">
+                  {characterSelected.species}
+                </span>
+              </li>
+              <li className="list_details">
+                <span className="span_details_title">Gender:</span>
+                <span className="span_details">{characterSelected.gender}</span>
+              </li>
+              <li className="list_details">
+                <span className="span_details_title">House:</span>
+                <span className="span_details">{characterSelected.house}</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </>
     );
   }
 };

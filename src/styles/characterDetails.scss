@@ -9,26 +9,61 @@
 }
 
 .return{
+    display: flex;
+    justify-content:flex-end;
     color: black;
+    font: $font-style;
+    font-weight: bold;
 }
 
 .card_details{
-    width: 15rem;
-    height: 15rem;
+    width: 35rem;
+    height: 25rem;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     align-content: center;
     align-items: center;
     padding: 0.25rem;
     margin: 0.5rem;
-    border: 1px solid #FFCA33;
+    border: 2px solid #FFCA33;
     border-radius: 5px;
+    background-color:#840005;
 }  
 .img_details{
 
-    width: 10rem;
-    padding: 0.25rem;
+    width: 15rem;
+    padding: 0.5rem;
+}
+.ul_details{
+
+    padding-left: 3rem;
+}
+.name_details{
+    color: white;;
+    font: $font-style-2;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.list_details{
+
+    color: white;
+    font: $font-style-2;
+    font-weight: bold;
+}
+.span_details{
+
+    color: white;
+    font: $font-style-2;
+    font-weight: bold;
+}
+
+.span_details_title{
+    color: white;
+    font: $font-style-2;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-right: 0.5rem;
 }
 
 
