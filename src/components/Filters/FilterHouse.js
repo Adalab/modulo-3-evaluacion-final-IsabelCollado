@@ -1,4 +1,4 @@
-const FilterHouse = (handleSelectHouse, selectHouse) => {
+const FilterHouse = ({ handleSelectHouse, selectHouse }) => {
   const handleSelec = (ev) => {
     handleSelectHouse(ev.target.value);
   };

@@ -1,17 +1,15 @@
 import CharacterCard from './CharacterCard';
 
-const CharacterList = ({ filterCharacter }) => {
-  const listCharacter = filterCharacter.map((eachCharacter) => {
+const CharacterList = ({ characterList }) => {
+  const renderList = characterList.map((eachCharacter) => {
     return (
-      <CharacterCard
-        eachCharacter={eachCharacter}
-        key={eachCharacter.id}
-      ></CharacterCard>
+      <CharacterCard key={eachCharacter.id} eachCharacter={eachCharacter} />
     );
   });
+
   return (
-    <section>
-      <ul className="contact_list">{listCharacter}</ul>
+    <section className="section__list">
+      <ul className="list">{renderList}</ul>
     </section>
   );
 };

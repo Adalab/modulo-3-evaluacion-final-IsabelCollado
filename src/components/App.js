@@ -1,34 +1,25 @@
 /* SECCIÓN DE IMPORT */
 
-//import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import CallToApi from '../service/api';
-
-//import darkHarry from '../images/faviHarry.png';
-//import heartPulse from '../images/icons8-corazón-con-pulso-48.png';
-//import skull from '../images/icons8-skull-heart-45.png';
+import api from '../service/api';
 import '../styles/App.scss';
 import Filter from './Filters/Filter';
 import CharacterList from './List/CharacterList';
 import CharacterDetails from './CharacterDetails';
 import Header from './Header';
 import Footer from './Footer';
-
-/* SECCIÓN DEL COMPONENTE */
+import ResetBtn from './Reset';
 function App() {
-  /* VARIABLES ESTADO (DATOS) */
   const [characterList, setCharacterList] = useState([]);
   const [searchName, setSearchName] = useState('');
   const [selectHouse, setselectHouse] = useState('Gryffindor');
 
-  /* EFECTOS (código cuando carga la página) */
   useEffect(() => {
-    CallToApi(selectHouse).then((cleanData) => {
-      setCharacterList(cleanData);
+    api.getCharactersHouse(selectHouse).then((infoCharacters) => {
+      setCharacterList(infoCharacters);
     });
   }, [selectHouse]);
-
-  /* FUNCIONES HANDLER */
 
   const handleInputFilter = (value) => {
     setSearchName(value);
@@ -36,16 +27,21 @@ function App() {
   const handleSelectHouse = (value) => {
     setselectHouse(value);
   };
+  const handleClickBtn = () => {
+    setCharacterList('');
+    setselectHouse('Gryffindor');
+    window.location.reload();
+  };
 
-  /* FUNCIONES Y VARIABLES AUXILIARES PARA PINTAR EL HTML */
-
-  const filterCharacter = characterList.filter((eachCharacter) => {
-    return eachCharacter.name
+  const filterCharacterName = (eachCharacter) =>
+    eachCharacter.name
       .toLocaleLowerCase()
       .includes(searchName.toLocaleLowerCase());
-  });
 
-  /* HTML */
+  const renderFilteredList = () => {
+    return characterList.filter(filterCharacterName);
+  };
+
   return (
     <div className="App">
       <>
@@ -62,17 +58,20 @@ function App() {
                     selectHouse={selectHouse}
                     handleSelectHouse={handleSelectHouse}
                   ></Filter>
-
-                  <CharacterList filterCharacter={filterCharacter} />
+                  <ResetBtn handleClickBtn={handleClickBtn} />
+                  <CharacterList characterList={renderFilteredList()} />
                 </>
               }
             ></Route>
             <Route
-              path="/character/:characterId"
+              path="/character/:Id"
               element={
-                <CharacterDetails character={characterList}></CharacterDetails>
+                <CharacterDetails
+                  characterList={characterList}
+                ></CharacterDetails>
               }
             ></Route>
+            <Route path="*" element={<Navigate replace to="/" />} />
           </Routes>
         </main>
         <Footer />
@@ -80,7 +79,5 @@ function App() {
     </div>
   );
 }
-/* PROP-TYPES */
 
-/* EXPORT DEL COMPONENTE */
 export default App;

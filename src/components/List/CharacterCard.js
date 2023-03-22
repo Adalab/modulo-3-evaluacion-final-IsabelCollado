@@ -1,21 +1,18 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const CharacterCard = ({ eachCharacter }) => {
   return (
-    <dl>
-      <Link to={`/character/${eachCharacter.id}`}>
+    <NavLink to={`/character/${eachCharacter.id}`}>
+      <li className="list_character">
         <img
-          src={
-            eachCharacter.image !== ''
-              ? eachCharacter.image
-              : `https://via.placeholder.com/210x295/E5C07B/666666/?text=${eachCharacter.name}`
-          }
-          alt={`character: ${eachCharacter.name}`}
+          className="list_character_img"
+          src={eachCharacter.image}
+          alt={eachCharacter.name}
         />
-        <dt>{eachCharacter.name}</dt>
-        <dd>{eachCharacter.specie}</dd>
-      </Link>
-    </dl>
+        <p className="list_character_name">{eachCharacter.name}</p>
+        <p className="list_character_species">{eachCharacter.species}</p>
+      </li>
+    </NavLink>
   );
 };
 

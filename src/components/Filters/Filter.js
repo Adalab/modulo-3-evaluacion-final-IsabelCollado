@@ -7,9 +7,12 @@ const Filter = ({
   selectHouse,
   handleSelectHouse,
 }) => {
+  const handleSubmit = (ev) => {
+    ev.preventDefault();
+  };
   return (
     <section className="search_section">
-      <form action="./" className="form_section">
+      <form action="./" className="form_section" onSubmit={handleSubmit}>
         <FilterName
           handleInputFilter={handleInputFilter}
           searchName={searchName}
