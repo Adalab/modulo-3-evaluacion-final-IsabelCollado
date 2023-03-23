@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Welcome from '../images/harry-potter-hogwart.png';
+import Audio from './audio';
 
 const Landing = () => {
   return (
@@ -7,6 +8,7 @@ const Landing = () => {
       <Link to="/house" className="button">
         Entrar en Hogwarts!!
       </Link>
+      <Audio />
       <h1 className="landing-title">Bienvenidos a Hogwarts</h1>
       <div
         style={{

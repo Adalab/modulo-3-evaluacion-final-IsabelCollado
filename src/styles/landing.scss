@@ -56,3 +56,28 @@
         transform: scale(1, 1) rotate(0deg);
       }
 }
+
+
+    .audio {
+      color: red;
+      background-color: black;
+    }
+  
+  
+  .hidden {
+    display: none;
+  }
+  
+  .fa-volume-xmark,
+  .fa-volume-high {
+    color: white;
+    font-size: 20px;
+    margin: 25px 25px;
+    cursor: pointer;
+    &:hover {
+      transform: scale(130%);
+    }
+    @media (min-width: 780px) {
+      font-size: 35px;
+    }
+}

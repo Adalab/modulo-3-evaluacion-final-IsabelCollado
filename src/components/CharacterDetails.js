@@ -80,7 +80,7 @@ const CharacterDetails = ({ findCharacter }) => {
 
               <li className="list_details">
                 <span className="span_details_title">
-                  Casa: {characterSelected.house}
+                  House: {characterSelected.house}
                 </span>
                 <img src={houseClass()} alt="" className="detail_house_img" />
               </li>
