@@ -6,6 +6,8 @@ import Ravenclaw from '../images/Ravenclaw.png';
 import Slytherin from '../images/Slytherin.png';
 import yes from '../images/icons8-corazón-con-pulso-48.png';
 import no from '../images/icons8-skull-heart-45.png';
+import NotFoundCharacter from './NotFoundCharacter';
+
 const CharacterDetails = ({ characterList }) => {
   const { id } = useParams();
   const characterSelected = characterList.find(
@@ -24,7 +26,7 @@ const CharacterDetails = ({ characterList }) => {
   };
 
   if (characterSelected !== undefined) {
-    return (
+    return characterSelected && characterSelected.id ? (
       <>
         <NavLink className="return" to="/">
           Volver página principal
@@ -87,6 +89,10 @@ const CharacterDetails = ({ characterList }) => {
           </div>
         </article>
       </>
+    ) : (
+      <main>
+        <NotFoundCharacter />
+      </main>
     );
   }
 };

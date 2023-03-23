@@ -1,11 +1,4 @@
-import {
-  Navigate,
-  Route,
-  Routes,
-  matchPath,
-  useLocation,
-  useParams,
-} from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import api from '../service/api';
 import '../styles/App.scss';
@@ -15,6 +8,7 @@ import CharacterDetails from './CharacterDetails';
 import Header from './Header';
 import Footer from './Footer';
 import ResetBtn from './Reset';
+import NotFoundCharacter from './NotFoundCharacter';
 
 function App() {
   const [characterList, setCharacterList] = useState([]);
@@ -94,7 +88,7 @@ function App() {
                 ></CharacterDetails>
               }
             ></Route>
-            <Route path="*" element={<Navigate replace to="/" />} />
+            <Route path="*" element={<NotFoundCharacter />} />
           </Routes>
         </main>
         <Footer />
