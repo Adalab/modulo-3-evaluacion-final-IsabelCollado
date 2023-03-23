@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "./static/css/main.3e28afac.css",
+    "main.js": "./static/js/main.23888de5.js",
+    "static/media/harry-potter-hogwart.png": "./static/media/harry-potter-hogwart.ad89bed423210827d224.png",
+    "static/media/ringtones-harry-potter.mp3": "./static/media/ringtones-harry-potter.28458051cc0bd65ad18d.mp3",
+    "static/media/titleHarry.png.png": "./static/media/titleHarry.png.99f6765dd9bbf40d7ca2.png",
+    "static/media/faviHarry.png": "./static/media/faviHarry.c1e903dc3a0653a3744a.png",
+    "static/media/Hufflepuff.png": "./static/media/Hufflepuff.a66a0c9af1c0867d31af.png",
+    "static/media/Ravenclaw.png": "./static/media/Ravenclaw.489d6a0ddfa04fa8bfd4.png",
+    "static/media/Slytherin.png": "./static/media/Slytherin.2d58c876b0ffde2828df.png",
+    "static/media/Gryffindor.png": "./static/media/Gryffindor.025e70d7da665caf9c40.png",
+    "static/media/userdefault.png.png": "./static/media/userdefault.png.cb69260fa72af937b4a5.png",
+    "index.html": "./index.html",
+    "main.3e28afac.css.map": "./static/css/main.3e28afac.css.map",
+    "main.23888de5.js.map": "./static/js/main.23888de5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e28afac.css",
+    "static/js/main.23888de5.js"
+  ]
+}
