@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+### EVALUACIÓN MÓDULO 3
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aquí podréis encontrar mi ejercicio de evaluación final de React, es una página web sobre ¡Harry Potter! ⚡
 
-## Available Scripts
+## Pre-requisitos 📋
 
-In the project directory, you can run:
+Hemos necesitado el Starter Kit React, crear un repositorio en GitHub y una Api facilitada por los profesores de Adalab.
 
-### `npm start`
+## Herramientas 🛠️
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Las herramientas y lenguajes empleados para la realización de este ejercicio, son las siguientes:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+☑ VISUAL STUDIO CODE (VSC)
 
-### `npm test`
+☑ GIT / GITHUB
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+☑ React
 
-### `npm run build`
+☑ HTML
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+☑ SCSS: Estilos simples y coloridos para darle estilos a la web.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Interacción con la web 🚀
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+La aplicación funciona siguiendo estos pasos:
 
-### `npm run eject`
+1. Página de bienvenida a la web de Hogwarts, donde te permite clicar para entrar y descubrir sus casas y sus presonajes.
+2. En la siguiente página podras ver que aparecen las tarjetas de la casa Gryffindor, pero podrás buscar en los filtros la casa que desees ver, el personaje que desees buscar y el género si es femenino o másculino y un boton de reset si quisieras volver a ver la página por defecto.
+3. Si quisieras ver las caracteristicas de cualquier personaje, con solo clicar encima de cualquier tarjeta, esta te lleva a otra página donde podrás ver su imágen (si tiene), su nombre y apellido, su género, el status, la especie y la casa a la que pertenece.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Authors ✒️
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [IsabelCollado](https://www.github.com/IsabelCollado) 🌺

@@ -8,11 +8,10 @@ import yes from '../images/icons8-corazón-con-pulso-48.png';
 import no from '../images/icons8-skull-heart-45.png';
 import NotFoundCharacter from './NotFoundCharacter';
 
-const CharacterDetails = ({ characterList }) => {
-  const { id } = useParams();
-  const characterSelected = characterList.find(
-    (eachCharacter) => eachCharacter.id === id
-  );
+const CharacterDetails = ({ findCharacter }) => {
+  const params = useParams();
+  const characterSelected = findCharacter(params.id);
+
   const houseClass = () => {
     if (characterSelected.house === 'Gryffindor') {
       return `${Gryffindor}`;
@@ -28,7 +27,7 @@ const CharacterDetails = ({ characterList }) => {
   if (characterSelected !== undefined) {
     return characterSelected && characterSelected.id ? (
       <>
-        <NavLink className="return" to="/">
+        <NavLink className="return" to="/house">
           Volver página principal
         </NavLink>
 

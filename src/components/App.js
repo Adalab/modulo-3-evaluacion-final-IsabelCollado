@@ -9,6 +9,7 @@ import Header from './Header';
 import Footer from './Footer';
 import ResetBtn from './Reset';
 import NotFoundCharacter from './NotFoundCharacter';
+import Landing from './Landing';
 
 function App() {
   const [characterList, setCharacterList] = useState([]);
@@ -51,14 +52,20 @@ function App() {
         : eachCharacter.gender === selectedGender;
     });
 
+  const findCharacter = (value) => {
+    return characterList.find((eachCharacter) => eachCharacter.id === value);
+  };
+
   return (
     <div className="App">
       <>
         <Header />
         <main className="main">
           <Routes>
+            <Route path="/" element={<Landing></Landing>}></Route>
+
             <Route
-              path="/"
+              path="/house"
               element={
                 <>
                   <ResetBtn handleClickBtn={handleClickBtn} />
@@ -85,6 +92,7 @@ function App() {
               element={
                 <CharacterDetails
                   characterList={characterList}
+                  findCharacter={findCharacter}
                 ></CharacterDetails>
               }
             ></Route>
