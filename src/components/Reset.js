@@ -4,7 +4,7 @@ const ResetBtn = ({ handleClickBtn }) => {
   };
 
   return (
-    <button className="btn_reset" onClick={handelResetBtn}>
+    <button className="btn_reset" type="button" onClick={handelResetBtn}>
       Reset
     </button>
   );

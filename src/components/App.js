@@ -26,6 +26,12 @@ function App() {
   const handleInputFilter = (value) => {
     setSearchName(value);
   };
+
+  const handleClickBtn = () => {
+    setCharacterList('');
+    setselectHouse('Gryffindor');
+    setSelectedGender('all');
+  };
   const handleSelectHouse = (value) => {
     setselectHouse(value);
   };
@@ -33,19 +39,12 @@ function App() {
     setSelectedGender(value);
   };
 
-  const handleClickBtn = () => {
-    setCharacterList('');
-    setselectHouse('Gryffindor');
-    setSelectedGender('all');
-    window.location.reload();
-  };
-
   const filterCharacterName = characterList
-    .filter((eachCharacter) =>
-      eachCharacter.name
+    .filter((eachCharacter) => {
+      return eachCharacter.name
         .toLocaleLowerCase()
-        .includes(searchName.toLocaleLowerCase())
-    )
+        .includes(searchName.toLocaleLowerCase());
+    })
     .filter((eachCharacter) => {
       return selectedGender === 'all'
         ? true
