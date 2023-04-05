@@ -28,7 +28,7 @@ function App() {
   };
 
   const handleClickBtn = () => {
-    setCharacterList('');
+    setSearchName('');
     setselectHouse('Gryffindor');
     setSelectedGender('all');
   };
