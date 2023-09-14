@@ -5,7 +5,7 @@ const FilterHouse = ({ handleSelectHouse, selectHouse }) => {
   return (
     <>
       <label htmlFor="selectHouse" className="select">
-        Selecciona la casa:
+        Select the house:
       </label>
       <select
         className="select"

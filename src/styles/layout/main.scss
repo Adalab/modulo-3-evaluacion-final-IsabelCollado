@@ -1,0 +1,153 @@
+.main {
+  width: 100%;
+  background-color: black;
+}
+.search_section {
+  width: 100%;
+  font: $font-style;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $greyish-brown;
+}
+.form_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+  margin: 0.5rem;
+  border: 1px solid #ffca33;
+  border-radius: 5px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25rem;
+    margin: 0.5rem;
+    border: 1px solid #ffca33;
+    border-radius: 5px;
+
+    .input_text {
+      margin: 0.25rem;
+      font: $font-style-2;
+      font-weight: bold;
+      color: black;
+    }
+    .input_search {
+      width: 10rem;
+      font: $font-style-2;
+      font-weight: bold;
+      color: black;
+    }
+    .select {
+      margin: 0.25rem;
+      font: $font-style-2;
+      font-weight: bold;
+      color: black;
+    }
+  }
+}
+.input_text {
+  margin: 0.25rem;
+  font: $font-style-2;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: black;
+}
+
+.input_search {
+  width: 8rem;
+  font: $font-style-2;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: black;
+}
+.select {
+  margin: 0.25rem;
+  font: $font-style-2;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: black;
+}
+.errormsg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font: $font-style;
+  font-weight: bolder;
+  color: #ffca33;
+}
+
+.section__list {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: $greyish-brown;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.list_character {
+  width: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.25rem;
+  margin: 0.5rem;
+  border: 1px solid #ffca33;
+  border-radius: 5px;
+  background-color: hsl(6, 21%, 38%);
+}
+
+.list_character_img {
+  width: 5rem;
+  padding: 0.25rem;
+}
+
+.list_character_name {
+  font: $font-style-2;
+  color: black;
+}
+
+.list_character_species {
+  font: $font-style-2;
+  font-size: 1rem;
+  color: black;
+}
+
+.btn_reset {
+  width: 4rem;
+  margin: auto;
+  font: $font-style-2;
+  background-color: #ffc107;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  //spadding: 8px 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media (min-width: 768px) {
+    width: 6rem;
+    margin: auto;
+    font: $font-style-2;
+    background-color: #ffc107;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.btn_reset:hover {
+  background-color: #ffa000;
+}

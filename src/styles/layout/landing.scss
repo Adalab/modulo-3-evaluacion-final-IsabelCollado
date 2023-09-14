@@ -1,0 +1,49 @@
+.landing {
+  background-image: url('../../images/harry-potter-hogwart.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 83vh;
+  @media (min-width: 768px) {
+    min-height: 83vh;
+  }
+
+  &__btn {
+    background-color: transparent;
+    color: white;
+    padding: 15px;
+    border: solid 2px white;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+    left: 0.5rem;
+
+    &:hover {
+      background-color: #ffca33;
+      color: black;
+      transform: scale(100%);
+      border: 2px solid white;
+      opacity: 80%;
+    }
+    &::after {
+      content: '';
+      background: #ffca33; /* color de fondo hover */
+      position: absolute;
+      z-index: -1;
+      padding: 16px 20px;
+      display: block;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transform: scale(0, 0) rotate(-180deg);
+      transition: all 0.3s ease;
+    }
+    &:hover::after {
+      transition: all 0.3s ease-out;
+      transform: scale(1, 1) rotate(0deg);
+    }
+  }
+}

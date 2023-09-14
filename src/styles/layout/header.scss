@@ -1,0 +1,12 @@
+.App {
+  width: 100%;
+  height: fit-content;
+}
+
+.title_header {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background-color: $greyish-brown-88;
+  border-bottom: solid 2px white;
+}

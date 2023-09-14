@@ -6,7 +6,7 @@ const FilterGender = ({ selectedGender, handleSelectGender }) => {
   return (
     <>
       <label htmlFor="gender" className="select">
-        Selecciona un género:
+        Select a genre:
       </label>
       <select
         className="select"
@@ -15,9 +15,9 @@ const FilterGender = ({ selectedGender, handleSelectGender }) => {
         onChange={handleChange}
         value={selectedGender}
       >
-        <option value="all">Todos</option>
-        <option value="female">Mujer</option>
-        <option value="male">Hombre</option>
+        <option value="all">All</option>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
       </select>
     </>
   );

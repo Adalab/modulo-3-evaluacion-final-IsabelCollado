@@ -28,7 +28,7 @@ const CharacterDetails = ({ findCharacter }) => {
     return characterSelected && characterSelected.id ? (
       <>
         <NavLink className="return" to="/house">
-          Volver página principal
+          Back to home
         </NavLink>
 
         <article className="article">

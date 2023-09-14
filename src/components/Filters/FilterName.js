@@ -5,7 +5,7 @@ const FilterName = ({ handleInputFilter, searchName }) => {
   return (
     <>
       <label htmlFor="searchCharacter" className="input_text">
-        Buscar por personaje:
+        Search by character:
       </label>
       <input
         className="input_search"

@@ -1,8 +1,8 @@
-/* Aquí van tus estilos */
-@import 'reset.scss';
-@import 'variables.scss';
-@import './characterDetails.scss';
-@import './landing.scss';
-@import './header.scss';
-@import './main.scss';
-@import './footer.scss'
+@import './core/reset.scss';
+@import './core/variables.scss';
+@import './layout/header.scss';
+@import './layout/landing.scss';
+@import './layout/main.scss';
+@import './layout/characterDetails.scss';
+@import './layout/buttonReset.scss';
+@import './layout/footer.scss';

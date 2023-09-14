@@ -1,15 +1,13 @@
 import { Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import api from '../service/api';
-import '../styles/App.scss';
 import Filter from './Filters/Filter';
 import CharacterList from './List/CharacterList';
 import CharacterDetails from './CharacterDetails';
-import Header from './Header';
 import Footer from './Footer';
-import ResetBtn from './Reset';
 import NotFoundCharacter from './NotFoundCharacter';
 import Landing from './Landing';
+import '../styles/App.scss';
 
 function App() {
   const [characterList, setCharacterList] = useState([]);
@@ -58,7 +56,6 @@ function App() {
   return (
     <div className="App">
       <>
-        <Header />
         <main className="main">
           <Routes>
             <Route path="/" element={<Landing></Landing>}></Route>
@@ -67,7 +64,6 @@ function App() {
               path="/house"
               element={
                 <>
-                  <ResetBtn handleClickBtn={handleClickBtn} />
                   <Filter
                     searchName={searchName}
                     handleInputFilter={handleInputFilter}

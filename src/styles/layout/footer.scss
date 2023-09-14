@@ -1,0 +1,40 @@
+.footer {
+  width: 100%;
+  height: fit-content;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: solid 2px white;
+  height: 17vh;
+  gap: 0.3rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1.9rem;
+  }
+}
+
+.icono_footer {
+  width: 2rem;
+}
+.footer-copy {
+  color: white;
+  font-size: 0.8rem;
+}
+
+.fa-brands {
+  color: white;
+  margin: 5px 0 0 10px;
+  cursor: pointer;
+  &:hover {
+    transform: scale(140%);
+  }
+  @media (min-width: 700px) {
+    font-size: 20px;
+  }
+}
