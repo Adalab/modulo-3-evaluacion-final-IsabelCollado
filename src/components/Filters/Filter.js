@@ -3,6 +3,7 @@ import FilterHouse from './FilterHouse';
 import FilterGender from './FilterGender';
 import Header from '../Header';
 import ResetBtn from '../Reset';
+
 const Filter = ({
   handleInputFilter,
   searchName,
@@ -10,6 +11,9 @@ const Filter = ({
   handleSelectHouse,
   selectedGender,
   handleSelectGender,
+  setSearchName,
+  setselectHouse,
+  setSelectedGender,
 }) => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
@@ -32,7 +36,11 @@ const Filter = ({
             handleSelectGender={handleSelectGender}
             selectedGender={selectedGender}
           />
-          <ResetBtn />
+          <ResetBtn
+            setSearchName={setSearchName}
+            setselectHouse={setselectHouse}
+            setSelectedGender={setSelectedGender}
+          />
         </form>
       </section>
     </>

@@ -25,11 +25,6 @@ function App() {
     setSearchName(value);
   };
 
-  const handleClickBtn = () => {
-    setSearchName('');
-    setselectHouse('Gryffindor');
-    setSelectedGender('all');
-  };
   const handleSelectHouse = (value) => {
     setselectHouse(value);
   };

@@ -1,10 +1,12 @@
-const ResetBtn = ({ handleClickBtn }) => {
-  const handelResetBtn = () => {
-    handleClickBtn();
+const ResetBtn = ({ setSearchName, setselectHouse, setSelectedGender }) => {
+  const handleClickBtn = () => {
+    setSearchName('');
+    setselectHouse('Gryffindor');
+    setSelectedGender('all');
   };
 
   return (
-    <button className="btn_reset" type="button" onClick={handelResetBtn}>
+    <button className="btn_reset" onClick={handleClickBtn}>
       Reset
     </button>
   );
