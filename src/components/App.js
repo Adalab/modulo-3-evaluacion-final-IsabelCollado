@@ -60,6 +60,9 @@ function App() {
               element={
                 <>
                   <Filter
+                    setSearchName={setSearchName}
+                    setselectHouse={setselectHouse}
+                    setSelectedGender={setSelectedGender}
                     searchName={searchName}
                     handleInputFilter={handleInputFilter}
                     selectHouse={selectHouse}
