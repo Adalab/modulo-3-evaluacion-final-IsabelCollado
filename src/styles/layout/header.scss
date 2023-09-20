@@ -3,11 +3,26 @@
   height: fit-content;
 }
 
+.header {
+  width: 100%;
+  height: fit-content;
+}
+
 .title_header {
   width: 100%;
-  padding: 1.5rem;
+  padding: 1rem;
   position: relative;
   z-index: 1;
   background-color: $greyish-brown-88;
   border-bottom: solid 2px black;
+
+  @media (min-width: 768px) {
+    padding: 1.5rem;
+    height: 14rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 2rem;
+    height: 20rem;
+  }
 }
