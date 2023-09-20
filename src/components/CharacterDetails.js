@@ -29,63 +29,69 @@ const CharacterDetails = ({ findCharacter }) => {
     return characterSelected && characterSelected.id ? (
       <>
         <Header />
-        <main className="main--details">
-          <div className="div--icon">
-            <NavLink className="return" to="/house">
+        <main className="main_details">
+          <div className="main_details_div">
+            <NavLink className="main_details_div_return" to="/house">
               <span class="material-symbols-outlined">arrow_back</span>
             </NavLink>
           </div>
-          <section className="card_details">
-            <article className="article">
-              <div>
-                <h2 className="name_details">{characterSelected.name}</h2>
+          <div className="card_details">
+            <article className="card_details_article">
+              <div className="card_details_div">
                 <img
-                  className="img_details"
+                  className="card_details_img"
                   src={characterSelected.image}
                   alt={characterSelected.name}
                 />
               </div>
-              <section className="section--p">
-                <p className="status">
-                  Estatus:
+              <article className="card_details_article_descrip">
+                <h2 className="card_details_article_title">
+                  {characterSelected.name}
+                </h2>
+                <div className="card_details_article_status">
                   {characterSelected.alive === true ? (
                     <>
-                      live
                       <img
                         src={yes}
                         alt="heart"
                         title="heart"
-                        className="heart_yes"
+                        className="card_details_article_status_yes"
                       />
                     </>
                   ) : (
                     <>
-                      dead
                       <img
                         src={no}
                         alt="skull"
                         title="heart"
-                        className="skull_no"
+                        className="card_details_article_status_no"
                       />
                     </>
                   )}
-                </p>
+                </div>
+                <div className="card_details_article_p">
+                  <p className="card_details_article_species">
+                    Species : {characterSelected.species}
+                  </p>
 
-                <p className="span_details_title">Species:</p>
-                <p className="span_details">{characterSelected.species}</p>
+                  <p className="card_details_article_gender">
+                    Gender : {characterSelected.gender}
+                  </p>
 
-                <p className="span_details_title">Gender:</p>
-                <p className="span_details">{characterSelected.gender}</p>
-
-                <p className="span_details_title">
-                  House: {characterSelected.house}
-                </p>
-              </section>
-              <div className="detail--div">
-                <img src={houseClass()} alt="" className="detail_house_img" />
-              </div>
+                  <p className="card_details_article_house">
+                    House : {characterSelected.house}
+                  </p>
+                </div>
+              </article>
             </article>
-          </section>
+            <div className="card_details_banner">
+              <img
+                src={houseClass()}
+                alt={houseClass()}
+                className="card_details_banner_img"
+              />
+            </div>
+          </div>
         </main>
       </>
     ) : (
