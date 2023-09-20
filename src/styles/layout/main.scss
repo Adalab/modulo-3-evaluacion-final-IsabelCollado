@@ -9,53 +9,36 @@
   flex-direction: column;
   align-items: center;
   background-color: $greyish-brown;
+  padding-top: 0.5rem;
+
+  @media (min-width: 768px) {
+    padding: 1rem;
+  }
 }
 .form_section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.25rem;
-  margin: 0.5rem;
+  padding: 1rem;
   border: 1px solid #ffca33;
   border-radius: 5px;
+  gap: 0.5rem;
 
   @media (min-width: 768px) {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0.25rem;
-    margin: 0.5rem;
-    border: 1px solid #ffca33;
-    border-radius: 5px;
-
-    .input_text {
-      margin: 0.25rem;
-      font: $font-style-2;
-      font-weight: bold;
-      color: black;
-    }
-    .input_search {
-      width: 10rem;
-      font: $font-style-2;
-      font-weight: bold;
-      color: black;
-    }
-    .select {
-      margin: 0.25rem;
-      font: $font-style-2;
-      font-weight: bold;
-      color: black;
-    }
   }
 }
 .input_text {
-  margin: 0.25rem;
   font: $font-style-2;
-  font-size: 0.8rem;
   font-weight: bold;
   color: black;
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
 }
 
 .input_search {
@@ -64,19 +47,43 @@
   font-size: 0.8rem;
   font-weight: bold;
   color: black;
+  @media (min-width: 768px) {
+    height: 1.7rem;
+  }
 }
 .select {
-  margin: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   font: $font-style-2;
   font-size: 0.8rem;
   font-weight: bold;
   color: black;
+  gap: 0.5rem;
+  @media (min-width: 768px) {
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 0.5rem;
+  }
+
+  &--option {
+    font: $font-style-2;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: black;
+  }
 }
 .errormsg {
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   font: $font-style;
+  font-size: 0.8rem;
   font-weight: bolder;
   color: #ffca33;
 }
@@ -94,60 +101,40 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  gap: 1rem;
 }
 
 .list_character {
   width: 8rem;
+  height: 14rem;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  padding: 0.25rem;
-  margin: 0.5rem;
+  padding: 1rem;
   border: 1px solid #ffca33;
   border-radius: 5px;
   background-color: hsl(6, 21%, 38%);
-}
+  gap: 0.5rem;
 
-.list_character_img {
-  width: 5rem;
-  padding: 0.25rem;
-}
-
-.list_character_name {
-  font: $font-style-2;
-  color: black;
-}
-
-.list_character_species {
-  font: $font-style-2;
-  font-size: 1rem;
-  color: black;
-}
-
-.btn_reset {
-  width: 4rem;
-  margin: auto;
-  font: $font-style-2;
-  background-color: #ffc107;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  //spadding: 8px 16px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-  @media (min-width: 768px) {
-    width: 6rem;
-    margin: auto;
-    font: $font-style-2;
-    background-color: #ffc107;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 6px 10px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  &_img {
+    width: 5rem;
+    height: 6.5rem;
   }
-}
 
-.btn_reset:hover {
-  background-color: #ffa000;
+  &_div {
+    font: $font-style;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    gap: 1rem;
+  }
+
+  &_species {
+    text-transform: uppercase;
+  }
 }

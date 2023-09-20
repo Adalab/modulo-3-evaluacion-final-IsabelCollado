@@ -9,8 +9,10 @@ const CharacterCard = ({ eachCharacter }) => {
           src={eachCharacter.image}
           alt={eachCharacter.name}
         />
-        <p className="list_character_name">{eachCharacter.name}</p>
-        <p className="list_character_species">{eachCharacter.species}</p>
+        <div className="list_character_div">
+          <p className="list_character_name">{eachCharacter.name}</p>
+          <p className="list_character_species">{eachCharacter.species}</p>
+        </div>
       </li>
     </NavLink>
   );

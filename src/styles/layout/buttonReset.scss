@@ -1,4 +1,25 @@
 .btn_reset {
   width: 5rem;
-  height: 2rem;
+  font: $font-style-2;
+  padding: 6px 6px;
+  background-color: #ffc107;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @media (min-width: 768px) {
+    width: 6rem;
+    font: $font-style-2;
+    background-color: #ffc107;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.btn_reset:hover {
+  background-color: #fea101;
 }

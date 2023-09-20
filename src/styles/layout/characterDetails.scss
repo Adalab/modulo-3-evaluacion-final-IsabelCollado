@@ -22,7 +22,11 @@
     font-weight: bold;
   }
 }
-
+.material-symbols-outlined {
+  font-size: 2rem;
+  position: relative;
+  z-index: 1;
+}
 .card_details {
   width: 100%;
   display: flex;

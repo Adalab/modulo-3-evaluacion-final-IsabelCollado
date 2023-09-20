@@ -6,19 +6,27 @@ const FilterHouse = ({ handleSelectHouse, selectHouse }) => {
     <>
       <label htmlFor="selectHouse" className="select">
         Select the house:
+        <select
+          className="input_search"
+          name="select house"
+          id="selectHouse"
+          onChange={handleSelec}
+          value={selectHouse}
+        >
+          <option value="Gryffindor" className="select--option">
+            Gryffindor
+          </option>
+          <option value="Slytherin" className="select--option">
+            Slytherin
+          </option>
+          <option value="Hufflepuff" className="select--option">
+            Hufflepuff
+          </option>
+          <option value="Ravenclaw " className="select--option">
+            Ravenclaw
+          </option>
+        </select>
       </label>
-      <select
-        className="select"
-        name="select house"
-        id="selectHouse"
-        onChange={handleSelec}
-        value={selectHouse}
-      >
-        <option value="Gryffindor">Gryffindor</option>
-        <option value="Slytherin">Slytherin</option>
-        <option value="Hufflepuff">Hufflepuff</option>
-        <option value="Ravenclaw ">Ravenclaw</option>
-      </select>
     </>
   );
 };

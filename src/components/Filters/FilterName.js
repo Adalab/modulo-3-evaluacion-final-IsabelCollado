@@ -4,19 +4,19 @@ const FilterName = ({ handleInputFilter, searchName }) => {
   };
   return (
     <>
-      <label htmlFor="searchCharacter" className="input_text">
+      <label htmlFor="searchCharacter" className="select">
         Search by character:
+        <input
+          className="input_search"
+          type="text"
+          autoComplete="off"
+          name="name"
+          id="name"
+          placeholder="example: Harry"
+          onInput={handleInput}
+          value={searchName}
+        />
       </label>
-      <input
-        className="input_search"
-        type="text"
-        autoComplete="off"
-        name="name"
-        id="name"
-        placeholder="ejemplo: Harry"
-        onInput={handleInput}
-        value={searchName}
-      />
     </>
   );
 };

@@ -27,27 +27,28 @@ const CharacterDetails = ({ findCharacter }) => {
   if (characterSelected !== undefined) {
     return characterSelected && characterSelected.id ? (
       <>
-        <NavLink className="return" to="/house">
-          Back to home
-        </NavLink>
-
         <article className="article">
           <div className="card_details">
-            <img
-              className="img_details"
-              src={characterSelected.image}
-              alt={characterSelected.name}
-            />
+            <NavLink className="return" to="/house">
+              <span class="material-symbols-outlined">arrow_back</span>
+            </NavLink>
 
             <ul className="ul_details">
               <li className="list_details">
                 <h2 className="name_details">{characterSelected.name}</h2>
               </li>
+              <li>
+                <img
+                  className="img_details"
+                  src={characterSelected.image}
+                  alt={characterSelected.name}
+                />
+              </li>
               <li className="status">
-                Estatus:{' '}
+                Estatus:
                 {characterSelected.alive === true ? (
                   <>
-                    Vivo/a{'  '}
+                    live
                     <img
                       src={yes}
                       alt="heart"
@@ -57,7 +58,7 @@ const CharacterDetails = ({ findCharacter }) => {
                   </>
                 ) : (
                   <>
-                    Muerto/a{'  '}
+                    dead
                     <img
                       src={no}
                       alt="skull"

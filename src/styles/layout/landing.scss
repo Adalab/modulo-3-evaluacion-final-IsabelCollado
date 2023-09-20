@@ -1,11 +1,14 @@
 .landing {
   background-image: url('../../images/harry-potter-hogwart.png');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50%;
   background-size: cover;
   min-height: 83vh;
   @media (min-width: 768px) {
-    min-height: 83vh;
+    min-height: 87vh;
+  }
+  @media (min-width: 1024px) {
+    min-height: 87vh;
   }
 
   &__btn {
