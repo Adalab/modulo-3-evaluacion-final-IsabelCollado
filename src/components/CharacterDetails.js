@@ -1,5 +1,6 @@
 import { NavLink, useParams } from 'react-router-dom';
 import '../styles/App.scss';
+import Header from './Header';
 import Gryffindor from '../images/Gryffindor.png';
 import Hufflepuff from '../images/Hufflepuff.png';
 import Ravenclaw from '../images/Ravenclaw.png';
@@ -27,72 +28,70 @@ const CharacterDetails = ({ findCharacter }) => {
   if (characterSelected !== undefined) {
     return characterSelected && characterSelected.id ? (
       <>
-        <article className="article">
-          <div className="card_details">
+        <Header />
+        <main className="main--details">
+          <div className="div--icon">
             <NavLink className="return" to="/house">
               <span class="material-symbols-outlined">arrow_back</span>
             </NavLink>
-
-            <ul className="ul_details">
-              <li className="list_details">
+          </div>
+          <section className="card_details">
+            <article className="article">
+              <div>
                 <h2 className="name_details">{characterSelected.name}</h2>
-              </li>
-              <li>
                 <img
                   className="img_details"
                   src={characterSelected.image}
                   alt={characterSelected.name}
                 />
-              </li>
-              <li className="status">
-                Estatus:
-                {characterSelected.alive === true ? (
-                  <>
-                    live
-                    <img
-                      src={yes}
-                      alt="heart"
-                      title="heart"
-                      className="heart_yes"
-                    />
-                  </>
-                ) : (
-                  <>
-                    dead
-                    <img
-                      src={no}
-                      alt="skull"
-                      title="heart"
-                      className="skull_no"
-                    />
-                  </>
-                )}
-              </li>
-              <li className="list_details">
-                <span className="span_details_title">Species:</span>
-                <span className="span_details">
-                  {characterSelected.species}
-                </span>
-              </li>
-              <li className="list_details">
-                <span className="span_details_title">Gender:</span>
-                <span className="span_details">{characterSelected.gender}</span>
-              </li>
+              </div>
+              <section className="section--p">
+                <p className="status">
+                  Estatus:
+                  {characterSelected.alive === true ? (
+                    <>
+                      live
+                      <img
+                        src={yes}
+                        alt="heart"
+                        title="heart"
+                        className="heart_yes"
+                      />
+                    </>
+                  ) : (
+                    <>
+                      dead
+                      <img
+                        src={no}
+                        alt="skull"
+                        title="heart"
+                        className="skull_no"
+                      />
+                    </>
+                  )}
+                </p>
 
-              <li className="list_details">
-                <span className="span_details_title">
+                <p className="span_details_title">Species:</p>
+                <p className="span_details">{characterSelected.species}</p>
+
+                <p className="span_details_title">Gender:</p>
+                <p className="span_details">{characterSelected.gender}</p>
+
+                <p className="span_details_title">
                   House: {characterSelected.house}
-                </span>
+                </p>
+              </section>
+              <div className="detail--div">
                 <img src={houseClass()} alt="" className="detail_house_img" />
-              </li>
-            </ul>
-          </div>
-        </article>
+              </div>
+            </article>
+          </section>
+        </main>
       </>
     ) : (
-      <main>
+      <span>
         <NotFoundCharacter />
-      </main>
+      </span>
     );
   }
 };
