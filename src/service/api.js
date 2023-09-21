@@ -8,7 +8,7 @@ const Api = (eachCharacter) => {
     image:
       eachCharacter.image !== ''
         ? eachCharacter.image
-        : require('../images/userdefault.png.png'),
+        : require('../images/user.png'),
     house: eachCharacter.house,
   };
 };

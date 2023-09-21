@@ -74,7 +74,7 @@ function App() {
                     {filterCharacterName.length > 0 ? (
                       <CharacterList characterList={filterCharacterName} />
                     ) : (
-                      `No hay personajes que coincidan con ${searchName}`
+                      `There are no characters that match ${searchName}`
                     )}
                   </section>
                 </>
