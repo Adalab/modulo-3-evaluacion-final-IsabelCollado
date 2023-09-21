@@ -50,50 +50,48 @@ function App() {
 
   return (
     <div className="App">
-      <>
-        <main className="main">
-          <Routes>
-            <Route path="/" element={<Landing></Landing>}></Route>
+      <main className="main">
+        <Routes>
+          <Route path="/" element={<Landing></Landing>}></Route>
 
-            <Route
-              path="/house"
-              element={
-                <>
-                  <Filter
-                    setSearchName={setSearchName}
-                    setselectHouse={setselectHouse}
-                    setSelectedGender={setSelectedGender}
-                    searchName={searchName}
-                    handleInputFilter={handleInputFilter}
-                    selectHouse={selectHouse}
-                    handleSelectHouse={handleSelectHouse}
-                    selectedGender={selectedGender}
-                    handleSelectGender={handleSelectGender}
-                  ></Filter>
-                  <section className="errormsg">
-                    {filterCharacterName.length > 0 ? (
-                      <CharacterList characterList={filterCharacterName} />
-                    ) : (
-                      `There are no characters that match ${searchName}`
-                    )}
-                  </section>
-                </>
-              }
-            ></Route>
-            <Route
-              path="/character/:id"
-              element={
-                <CharacterDetails
-                  characterList={characterList}
-                  findCharacter={findCharacter}
-                ></CharacterDetails>
-              }
-            ></Route>
-            <Route path="*" element={<NotFoundCharacter />} />
-          </Routes>
-        </main>
-        <Footer />
-      </>
+          <Route
+            path="/house"
+            element={
+              <>
+                <Filter
+                  setSearchName={setSearchName}
+                  setselectHouse={setselectHouse}
+                  setSelectedGender={setSelectedGender}
+                  searchName={searchName}
+                  handleInputFilter={handleInputFilter}
+                  selectHouse={selectHouse}
+                  handleSelectHouse={handleSelectHouse}
+                  selectedGender={selectedGender}
+                  handleSelectGender={handleSelectGender}
+                ></Filter>
+                <section className="errormsg">
+                  {filterCharacterName.length > 0 ? (
+                    <CharacterList characterList={filterCharacterName} />
+                  ) : (
+                    `There are no characters that match ${searchName}`
+                  )}
+                </section>
+              </>
+            }
+          ></Route>
+          <Route
+            path="/character/:id"
+            element={
+              <CharacterDetails
+                characterList={characterList}
+                findCharacter={findCharacter}
+              ></CharacterDetails>
+            }
+          ></Route>
+          <Route path="*" element={<NotFoundCharacter />} />
+        </Routes>
+      </main>
+      <Footer />
     </div>
   );
 }

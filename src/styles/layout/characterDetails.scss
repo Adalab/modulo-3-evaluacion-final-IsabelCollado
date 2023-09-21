@@ -23,7 +23,7 @@
 .card_details {
   width: 18.5rem;
   height: 53vh;
-  border: 0.18rem solid #ffca33;
+  border: 2.88px solid #ffca33;
   border-radius: 5px;
   background-color: #4f140d;
   @media (min-width: 768px) {
@@ -57,8 +57,8 @@
       font: $font-style-2;
       font-weight: bold;
       text-align: center;
-      border-top: solid 0.125rem white;
-      border-bottom: solid 0.125rem white;
+      border-top: solid 2px white;
+      border-bottom: solid 2px white;
       padding-top: 0.2rem;
       padding-bottom: 0.3rem;
       @media (min-width: 768px) {
@@ -104,7 +104,7 @@
   &_img {
     width: 7rem;
     height: 10rem;
-    border-radius: 1.25rem;
+    border-radius: 20px;
     position: relative;
     top: 4rem;
     @media (min-width: 768px) {

@@ -17,7 +17,7 @@
     padding: 15px;
     border: solid 2px white;
     border-radius: 50%;
-    font-size: 25px;
+    font-size: 1.5625rem;
     cursor: pointer;
     position: absolute;
     top: 2rem;
@@ -32,10 +32,10 @@
     }
     &::after {
       content: '';
-      background: #ffca33; /* color de fondo hover */
+      background: #ffca33;
       position: absolute;
       z-index: -1;
-      padding: 16px 20px;
+      padding: 1rem 1.25rem;
       display: block;
       left: 0;
       right: 0;
