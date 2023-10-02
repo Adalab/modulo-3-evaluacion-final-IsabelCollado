@@ -1,32 +1,49 @@
-### EVALUACIÓN MÓDULO 3
+### MODULE EVALUATION 3
 
-Aquí podréis encontrar mi ejercicio de evaluación final de React, es una página web sobre ¡Harry Potter! ⚡
+Here you can find my final React evaluation exercise, it's a website about Harry Potter! ⚡
 
-## Pre-requisitos 📋
+## Prerequisites 📋
 
-Hemos necesitado el Starter Kit React, crear un repositorio en GitHub y una Api facilitada por los profesores de Adalab.
+I needed the React Starter Kit, to create a repository on GitHub and an Api provided by Adalab teachers.
 
-## Herramientas 🛠️
+## Tools and programming languages 🛠 |
 
-Las herramientas y lenguajes empleados para la realización de este ejercicio, son las siguientes:
+- VISUAL STUDIO CODE (VSC) 🗄️
+- HTML 📌
+- JS ♡
+- REACT ⚡️
+- GIT / GITHUB 📂
+- SASS / SCSS 🔗
+- API 🔎
+- GULP 🖌️
 
-☑ VISUAL STUDIO CODE (VSC)
+## Getting Started 🚀
 
-☑ GIT / GITHUB
+The application works by following these steps:
 
-☑ React
+- 📍 Clone this repository on your local machine using the following command:
 
-☑ HTML
+```
+https://github.com/IsabelCollado/Harry-Potter.git
+```
 
-☑ SCSS: Estilos simples y coloridos para darle estilos a la web.
+```
+git clone
+```
 
-## Interacción con la web 🚀
+- ❗ Install project dependencies using npm:
 
-La aplicación funciona siguiendo estos pasos:
+```
+npm install
+```
 
-1. Página de bienvenida a la web de Hogwarts, donde te permite clicar para entrar y descubrir sus casas y sus presonajes.
-2. En la siguiente página podras ver que aparecen las tarjetas de la casa Gryffindor, pero podrás buscar en los filtros la casa que desees ver, el personaje que desees buscar y el género si es femenino o másculino y un boton de reset si quisieras volver a ver la página por defecto.
-3. Si quisieras ver las caracteristicas de cualquier personaje, con solo clicar encima de cualquier tarjeta, esta te lleva a otra página donde podrás ver su imágen (si tiene), su nombre y apellido, su género, el status, la especie y la casa a la que pertenece.
+- 🚀 Start the web application:
+
+```
+npm start
+```
+
+- ✔️ The application will run in your default browser.
 
 ## Authors ✒️
 
