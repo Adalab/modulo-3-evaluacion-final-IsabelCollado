@@ -48,3 +48,9 @@ npm start
 ## Authors ✒️
 
 - [IsabelCollado](https://www.github.com/IsabelCollado) 🌺
+
+If you want to contact me for any suggestion, doubt or contribution, don't hesitate to ask me!💬
+
+- Email: [icolladoherrera@gmail.com](icolladoherrera@gamil.com)
+- Linkedin: [https://www.linkedin.com/in/isabel-collado-herrera/](https://www.linkedin.com/in/isabel-collado-herrera/)
+- GitHub: [https://github.com/IsabelCollado](https://github.com/IsabelCollado)
